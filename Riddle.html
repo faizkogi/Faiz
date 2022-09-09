@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            @keyframes spin {
+                0%{
+                    transform: rotateY(360deg);
+                }
+            }
+            div{
+                background-color: yellow;
+                animation: spin 1s ease-in;
+                border: 5px solid black;
+                border-radius: 10px;
+                width: 300px;
+                text-align: center;
+                padding: 10px;
+                margin: 10px;
+            }
+            p{
+                font-size: xx-large;
+                font-family: monospace;
+            }
+            button{
+                background-color: aqua;
+                color: white;
+                border: 0;
+                border-radius: 10px;
+                height: 30px;
+                width: 100%;
+                font-weight: bold;
+            }
+            button:hover{
+                background-color: white;
+                color: aqua;
+                cursor: pointer;
+            }
+            button:focus{
+                outline: 0;
+            }
+        </style>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Riddle App</title>
+    </head>
+    <body>
+        <div id="main_div">
+            <p id="main_p"></p>
+            <button id="btn">ANSWER</button>
+            <p id="ans"></p>
+            <button id="btn_two">NEW RIDDLE</button>
+        </div>
+        <script>
+            window.onload = function() {
+                var main_div = document.getElementById('main_div');
+                var main_p = document.getElementById('main_p');
+                var btn = document.getElementById('btn');
+                var ans = document.getElementById('ans');
+                var btn_two = document.getElementById('btn_two');
+
+                function randomRiddle(riddle) {
+                    main_p.innerHTML = riddle[Math.round(Math.random() * 7)]
+                    btn.onclick = function() {
+                        if (main_p.innerHTML == riddle[0]) {
+                            ans.innerHTML = 'ONION'
+                        }
+                        if (main_p.innerHTML == riddle[1]) {
+                            ans.innerHTML = 'TEAPOT'
+                        }
+                        if (main_p.innerHTML == riddle[2]) {
+                            ans.innerHTML = 'CANDLE'
+                        }
+                        if (main_p.innerHTML == riddle[3]) {
+                            ans.innerHTML = 'AGE'
+                        }
+                        if (main_p.innerHTML == riddle[4]) {
+                            ans.innerHTML = 'UMBRELLA'
+                        }
+                        if (main_p.innerHTML == riddle[5]) {
+                            ans.innerHTML = 'VEGETABLES'
+                        }
+                        if (main_p.innerHTML == riddle[6]) {
+                            ans.innerHTML = 'ONE OF THEM IS THE GRAND FATHER, ONE IS THE FATHER, AND THE OTHER IS THE SON'
+                        }
+                        if (main_p.innerHTML == riddle[7]) {
+                            ans.innerHTML = 'MOSQUITO'
+                        }
+                    }
+
+                    btn_two.onclick = function() {
+                        main_p.innerHTML = riddle[Math.round(Math.random() * 7)]
+                        ans.innerHTML = ""
+                    }
+                }
+                
+                randomRiddle([
+                "WHAT AM I? PEEL ME I WON'T CRY BUT YOU WILL",
+                "WHAT AM I? I START WITH T, I END WITH T, AND I AM FILLED WITH T",
+                "WHAT AM I? I AM TALL, IF I WEAR A RED CAP I WILL BECOME SHORT",
+                "WHAT AM I? I GO UP BUT NEVER COME DOWN",
+                "WHAT AM I? I GO UP WHEN THE RAIN COMES DOWN",
+                "WHAT TABLE CAN WE EAT?",
+                "THERE ARE THREE PEOPLE IN A CAR, THERE ARE TWO FATHERS AND TWO SONS, HOW IS THIS POSIBLE?",
+                "WHAT AM I? YOU HATE ME BUT YOU ALWAYS CLAP FOR ME"])
+            }
+        </script>
+    </body>
+</html>

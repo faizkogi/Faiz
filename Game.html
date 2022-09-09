@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .wrapper{
+            background-color: aquamarine;
+            text-align: center;
+            border-radius: 10px;
+            height: 25%;
+            width: 50%;
+            margin-left: 25%;
+        }
+        button{
+            background-color: aqua;
+            color: white;
+            border: 0;
+            border-radius: 10px;
+            margin: 5px;
+            height: 30px;
+            width: 100px;
+        }
+        button:hover{
+            background-color: white;
+            color: aqua;
+            cursor: pointer;
+        }
+        button:focus{
+            outline: 0;
+        }
+        p{
+            color: black;
+            font-size: 30px;
+            font-family: monospace;
+            margin: 1px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, paper, scissors</title>
+</head>
+<body>
+    <div class="wrapper">
+        <p id="cpu">CPU: Ready!!!</p>
+        <p style="font-size: 12px;">Remember, rock smashes scissors, paper covers rock, scissors cuts paper</p>
+        <button id="rock">ROCK</button>
+        <button id="paper">PAPER</button>
+        <button id="scissors">SCISSORS</button>
+        <button id="new game">NEW GAME</button>
+        <p id="win">Ready!!!</p>
+    </div>
+    <script>
+        window.onload = function () {
+            var cpu = document.getElementById('cpu');
+            var rock = document.getElementById('rock');
+            var paper = document.getElementById('paper');
+            var scissors = document.getElementById('scissors');
+            var new_game = document.getElementById('new game');
+            var win = document.getElementById('win');
+
+            function random(game) {
+                    rock.onclick = function() {
+                        cpu.innerHTML = 'CPU:' + game[Math.floor(Math.random() * 3)];
+                        if(cpu.innerHTML == 'CPU:'+game[0]) {
+                        win.innerHTML = 'DRAW'
+                        } else if(cpu.innerHTML == 'CPU:'+game[1]) {
+                            win.innerHTML = 'LOOSE'
+                        } else if(cpu.innerHTML == 'CPU:'+game[2]) {
+                            win.innerHTML = 'WIN'
+                        }
+                }
+
+                paper.onclick = function() {
+                        cpu.innerHTML = 'CPU:' + game[Math.floor(Math.random() * 3)];
+                        if(cpu.innerHTML == 'CPU:'+game[0]) {
+                            win.innerHTML = 'WIN'
+                        } else if(cpu.innerHTML == 'CPU:'+game[1]) {
+                            win.innerHTML = 'DRAW'
+                        } else if(cpu.innerHTML == 'CPU:'+game[2]) {
+                            win.innerHTML = 'LOOSE'
+                        }
+                }
+
+                scissors.onclick = function() {
+                        cpu.innerHTML = 'CPU:' + game[Math.floor(Math.random() * 3)];
+                        if(cpu.innerHTML == 'CPU:'+game[0]) {
+                            win.innerHTML = 'LOOSE'
+                        } else if(cpu.innerHTML == 'CPU:'+game[1]) {
+                            win.innerHTML = 'WIN'
+                        } else if(cpu.innerHTML == 'CPU:'+game[2]) {
+                            win.innerHTML = 'DRAW'
+                        }
+                }
+
+            }
+
+            new_game.onclick = function() {
+                cpu.innerHTML = 'CPU: Ready!!!';
+                win.innerHTML = 'Ready!!!';
+            }
+            
+            random(['ROCK', 'PAPER', 'SCISSORS'])
+        }
+    </script>
+</body>
+</html>

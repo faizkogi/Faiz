@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .main-div{
+            background-color: blue;
+            height: 100px;
+            width: 20px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<body>
+    <div class="main-div" id="main-div"></div>
+    <p id="p">60</p>
+    <button id="btn">change</button>
+    <script>
+        window.onload = function() {
+            appendSeconds = document.getElementById('p');
+            var mainDiv = document.getElementById('main-div');
+            var btn = document.getElementById('btn');
+            var sec = 00;
+            var set ;
+            
+            function timer(color) {
+                set = setTimeout(timer, 1000)     
+                sec--; 
+                if(sec <= 9){
+                appendSeconds.innerHTML = "0" + sec;
+                }
+                    
+                if (sec > 9){
+                appendSeconds.innerHTML = sec;
+                } 
+                
+                if (sec < 1) {
+                appendSeconds.innerHTML = "0" + sec;
+                sec = 60;
+                appendSeconds.innerHTML = 60;
+                console.log('faiz');
+                clearTimeout(set);
+                }
+        }
+        function ram(color){
+            btn.onclick = function() {
+                var a = Math.floor(Math.random() * 2);
+                mainDiv.style.backgroundColor = color[a]
+                timer();
+            }
+    }
+        timer();
+        ram(['red', 'green']);
+    }
+    </script>
+</body>
+</html>

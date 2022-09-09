@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            body{
+                background-color: blueviolet;
+               
+            }
+            #input{
+                background-color: blanchedalmond;
+                border: 0px;
+                border-radius: 10px;
+                height: 50px;
+                width: 25%;
+                margin-top: 10px;
+                font-size: large;
+                margin-left: 25%;
+                font-family: monospace;
+                color: blueviolet;
+            }
+            input:focus{
+                outline: 0px;
+            }
+            #btn {
+                background-color: aqua;
+                color: azure;
+                border-radius: 10px;
+                font-size: large;
+                font-family: monospace;
+                border: 0px;
+                margin: 5px;
+                height: 50px;
+                width: 100px;
+            }
+            #btn:hover{
+                background-color: azure;
+                color: aqua;
+                cursor: pointer;
+            }
+            #clear{
+                background-color: red;
+                color: azure;
+                font-family: monospace;
+                border: 0px;
+                border-radius: 10px;
+                margin: 5px;
+                height: 50px;
+                width: 150px;
+            }
+            #clear:hover{
+                background-color: azure;
+                color: red;
+                cursor: pointer;
+            }
+            ol{
+                color: white;
+                font-size: large;
+                font-family: monospace;
+                margin: 10px;
+            }
+            h1{
+                text-transform: capitalize;
+                color: aliceblue;
+                font-size: xx-large;
+                font-family: monospace;
+                text-align: center;
+            }
+        </style>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>To do list</title>
+    </head>
+    <body>
+        <h1>To do list</h1>
+        <div class="div">
+        <input type="text" placeholder="Write here..." id="input">
+        <button class="btn" id="btn" onclick=" ol.innerHTML = ol.innerHTML + `<ol>` + input.value + `</ol>` + `<input type='checkbox'>`;
+            input.value = ''">ADD</button>
+        <button id="clear" onclick="ol.innerHTML = ''">Clear list</button>
+        
+        <ol id="ol"></ol>
+        </div>
+        <script>
+            var input = document.getElementById('input');
+            var btn = document.getElementById('btn');
+            var ol = document.getElementById('ol');
+            var Clear = document.getElementById('r');
+            var del = document.getElementById('del');
+            
+        </script>
+    </body>
+</html>

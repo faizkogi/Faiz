@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .main-div{
+            background-color: aquamarine;
+            text-align: center;
+            border-radius: 10px;
+            height: 25%;
+            width: 30%;
+            margin-left: 35%;
+        }
+        button{
+            background-color: aqua;
+            color: white;
+            border: 0;
+            border-radius: 10px;
+            margin: 5px;
+            height: 30px;
+            width: 100px;
+        }
+        button:hover{
+            background-color: white;
+            color: aqua;
+            cursor: pointer;
+        }
+        button:focus{
+            outline: 0;
+        }
+        p{
+            color: black;
+            font-size: 50px;
+            font-family: monospace;
+        }
+        h1{
+            color: darkgreen;
+            font-size: 50px;
+            margin: 10px;
+            text-align: center;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+<body>
+    <h1>Counter</h1>
+    <div class="main-div">
+        <p id="display">0</p>
+        <button id="increase" onclick="display.innerText = display.innerText*1 + 1*1">Increase</button>
+        <button id="reset" onclick="display.innerText = '0'">Reset</button>
+        <button id="decrease" onclick="display.innerText = display.innerText*1 - 1*1">Decrease</button>
+        <script type="text/javascript">
+            var display = document.getElementById('display');
+            var decrease = document.getElementById('decrease');
+            var reset = document.getElementById('reset');
+            var increase = document.getElementById('increase');
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            @keyframes slideFromRight {
+                0%{
+                    transform: translateX(100%);
+                }
+                100%{
+                    transform: translateX(0);
+                }
+            }
+            body{
+                background-color: burlywood;
+                font-family: monospace;
+            }
+            h1{
+                color: white;
+                text-align: center;
+            }
+            img{
+                height: 300px;
+                width: 300px;
+                float: left;
+                margin: 10px;
+            }
+            a{
+                font-family: monospace;
+            }
+            a:hover{
+                border-bottom: 3px solid dimgray;
+                color: dimgrey;
+            }
+            a:focus{
+                border-bottom: 3px solid black;
+            }
+            p{
+                font-size: large;
+                margin: 10px;
+                text-align: justify;
+                color: white;
+                animation: slideFromRight 1s ease-in;
+            }
+            ul{
+                text-align: center;
+                padding-top: 15px;
+            }
+            .nav{
+                background-color: aqua;
+                font-size: large;
+                height: 50px;
+                border-radius: 10px;
+                margin-left: 3px;
+            }
+            .link{
+                color: black;
+                text-decoration: none;
+                margin: 10px;
+            }
+        </style>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About</title>
+    </head>
+    <body>
+        <header>
+            <nav class="nav">
+                <ul>
+                    <a href="Portfolio.html" class="link">HOME</a>
+                    <a href="About.html" class="link">ABOUT</a>
+                </ul>
+            </nav>
+        </header>
+        <h1>THANKS FOR VISITING MY SITE</h1>
+            <p><img src="Faiz.jpg" alt="">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem unde 
+                at eius nostrum. Quidem, aliquid. Ipsam, velit consectetur tempore labore 
+                placeat suscipit illum minima eos, nostrum consequatur iure dolorum 
+                accusantium?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda saepe obcaecati delectus adipisci quibusdam, incidunt recusandae corrupti nostrum officia deserunt sint nam similique aspernatur dicta reprehenderit omnis beatae, autem itaque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora corrupti quae, voluptates, magnam, consequuntur non illum expedita nisi mollitia voluptas placeat sint eveniet minima iure veritatis iusto aperiam architecto eaque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, alias saepe iure modi soluta in ipsa rem temporibus! Laudantium dignissimos provident voluptatibus consectetur ducimus, maxime officia ullam voluptates tempore sapiente.
+           </p>
+    </body>
+</html>

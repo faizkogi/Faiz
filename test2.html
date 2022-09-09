@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        input{
+            width: 50px; 
+            
+        }
+        p{
+            border: 1px solid black;
+            width: 50px;
+            text-align: center;
+            display: inline-flex;
+            
+        }
+        .p{
+            border: 0;
+            margin-left: 0;
+        }
+        .o{
+            width: 100px;
+            text-align: center;
+            display: block;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="a" value="0">-
+    <input type="number" id="b" value="0">-
+    <input type="number" id="c" value="0">-
+    <input type="number" id="d" value="0">
+    <div>
+        <p id="e">0</p>+
+        <p id="f">0</p>+
+        <p id="g">0</p>
+        <p class="p">/ 3</p>
+        <p class="o" id="h">0</p>
+    </div>
+    <script>
+        window.onload = function() {
+            var a = document.getElementById('a');
+            var b = document.getElementById('b');
+            var c = document.getElementById('c');
+            var d = document.getElementById('d');
+            var e = document.getElementById('e');
+            var f = document.getElementById('f');
+            var g = document.getElementById('g');
+            var h = document.getElementById('h');
+
+            function add() {
+                setTimeout(add, 1)
+                e.innerHTML = a.value * 1 - b.value * 1;
+                f.innerHTML = b.value * 1 - c.value * 1;
+                g.innerHTML = c.value * 1 - d.value * 1;
+                h.innerHTML = Math.round((e.innerHTML * 1 + f.innerHTML * 1 + g.innerHTML * 1) / 3)
+            }
+            add();
+        }
+    </script>
+</body>
+</html>
